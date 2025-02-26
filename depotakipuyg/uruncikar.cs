@@ -36,13 +36,13 @@ namespace depotakipuyg
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                comboBox1.Items.Add(dr["musteri_unvani"]);
+                comboBox1.Items.Add(dr["musteriAdi"]);
             }
             conn.Close();
         }
         void griddoldur(string musteri_unvani)
         {
-            da = new SqlDataAdapter("Select u.id,m.musteri_id, m.musteri_unvani,u.urun_turu,u.miktar,u.birim,u.birim_fiyati from urunler u INNER JOIN musteriler m ON m.musteri_id = u.musteri_id where musteri_unvani = '" + musteri_unvani + "'", conn);
+            da = new SqlDataAdapter("Select u.urunID,m.musteriID, m.musteriAdi,u.urunAdi,u.urunMiktar,u.urunBirim,u.urunBirim_Fiyati from urunler u INNER JOIN musteriler m ON m.musteriID = u.musteriID where musteriAdi = '" + musteri_unvani + "'", conn);
             cmdb = new SqlCommandBuilder(da);
             ds = new DataSet();
             da.Fill(ds, "urunler");
@@ -66,7 +66,7 @@ namespace depotakipuyg
         {
             string urunid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
-            string sql = "Update urunler Set urun_turu =@urun_turu,miktar =@miktar,birim=@birim,birim_fiyati=@birim_fiyati where id='" + urunid + "'";
+            string sql = "Update urunler Set urunAdi =@urun_turu,urunMiktar =@miktar,urunBirim=@birim,urunBirim_Fiyati=@birim_fiyati where id='" + urunid + "'";
             SqlCommand cmd = new SqlCommand(sql, conn);
 
             cmd.Parameters.AddWithValue("@urun_turu", urunturu);

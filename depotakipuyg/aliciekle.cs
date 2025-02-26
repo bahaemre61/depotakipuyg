@@ -26,14 +26,14 @@ namespace depotakipuyg
         SqlDataAdapter da;
         private void Aliciekle_Load(object? sender, EventArgs e)
         {
-            string sql = "Select DISTINCT alici_ad from alicilar";
+            string sql = "Select DISTINCT aliciAdi from alicilarr";
             SqlCommand cmd = new SqlCommand(sql, conn);
 
             conn.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                comboBox1.Items.Add(dr["alici_ad"]);
+                comboBox1.Items.Add(dr["aliciAdi"]);
             }
             conn.Close();
             griddoldur();
@@ -41,7 +41,7 @@ namespace depotakipuyg
         }
         void griddoldur()
         {
-            da = new SqlDataAdapter("Select id,urun_turu,miktar,birim,birim_fiyati from urunler ", conn);
+            da = new SqlDataAdapter("Select urunID,urunAdi,urunMiktar,urunBirim,urunBirim_Fiyati from urunler ", conn);
             cmdb = new SqlCommandBuilder(da);
             ds = new DataSet();
             da.Fill(ds, "urunler");
@@ -49,7 +49,7 @@ namespace depotakipuyg
         }
         void aliciGriddoldur()
         {//"Select m.musteri_unvani,u.urun_turu,u.miktar,u.birim,u.birim_fiyati from urunler u INNER JOIN musteriler m ON m.musteri_id = u.musteri_id where musteri_unvani
-            da = new SqlDataAdapter("Select a.alici_ad,u.urun_turu,u.birim,a.miktar,a.birim_fiyati,a.alici_tarih from alicilar a INNER JOIN urunler u ON a.id = u.id where alici_ad ='"+comboBox1.Text+"'", conn);
+            da = new SqlDataAdapter("Select a.aliciAdi,u.urunAdi,u.urunBirim,a.aliciMiktar,a.aliciBirim_Fiyati,a.aliciTarih from alicilarr a INNER JOIN urunler u ON a.urunID = u.urunID where aliciAdi ='"+comboBox1.Text+"'", conn);
             cmdb = new SqlCommandBuilder(da);
             ds = new DataSet();
             da.Fill(ds, "alicilar");
@@ -67,7 +67,7 @@ namespace depotakipuyg
         }
         public void aliciEkle(int id ,string Ad,  DateTime Tarih, int miktar ,int birimfiyati)
         {
-            string sql = "INSERT INTO alicilar (id,alici_ad, alici_tarih, miktar,birim_fiyati)" + " VALUES (@id,@ad, @tarih,@miktar,@birimfiyat)";
+            string sql = "INSERT INTO alicilarr (urunID,aliciAdi, aliciTarih, aliciMiktar,aliciBirim_Fiyati)" + " VALUES (@id,@ad, @tarih,@miktar,@birimfiyat)";
 
             SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -90,7 +90,7 @@ namespace depotakipuyg
 
         private void button1_Click(object sender, EventArgs e)            
         {
-            string query = "select * from urunler where id ='" + Int32.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'";
+            string query = "select * from urunler where urunID ='" + Int32.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'";
             
 
             SqlCommand cmdd = new SqlCommand(query, conn);
@@ -100,7 +100,7 @@ namespace depotakipuyg
             {
                 while (dr.Read())
                 {
-                    query = dr[3].ToString();
+                    query = dr[2].ToString();
 
                 }
             }
@@ -121,7 +121,7 @@ namespace depotakipuyg
       
             void guncelleme(int id,int a )
             {
-                string sql = "Update urunler Set  miktar =@miktar where id='" + id + "'";
+                string sql = "Update urunler Set  urunMiktar =@miktar where urunID='" + id + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                                 
                 cmd.Parameters.AddWithValue("@miktar", a);
