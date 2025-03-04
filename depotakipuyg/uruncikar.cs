@@ -66,7 +66,7 @@ namespace depotakipuyg
         {
             string urunid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
-            string sql = "Update urunler Set urunAdi =@urun_turu,urunMiktar =@miktar,urunBirim=@birim,urunBirim_Fiyati=@birim_fiyati where id='" + urunid + "'";
+            string sql = "Update urunler Set urunAdi =@urun_turu,urunMiktar =@miktar,urunBirim=@birim,urunBirim_Fiyati=@birim_fiyati where urunID='" + urunid + "'";
             SqlCommand cmd = new SqlCommand(sql, conn);
 
             cmd.Parameters.AddWithValue("@urun_turu", urunturu);

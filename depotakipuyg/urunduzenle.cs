@@ -44,7 +44,7 @@ namespace depotakipuyg
         }
         void griddoldur(string musteri_unvani)
         {
-            da = new SqlDataAdapter("Select m.musteriAdi,u.urunAdi,u.urunMiktar,u.urunBirim,u.urunBirim_Fiyati from urunler u INNER JOIN musteriler m ON m.musteriID = u.musteriID where musteriAdi = '" + musteri_unvani+ "'", conn);
+            da = new SqlDataAdapter("Select m.musteriAdi,u.urunAdi,u.urunMiktar,u.urunBirim,u.urunBirim_Fiyati, m.musteriTarih from urunler u INNER JOIN musteriler m ON m.musteriID = u.musteriID where musteriAdi = '" + musteri_unvani+ "'", conn);
             cmdb = new SqlCommandBuilder(da);
             ds = new DataSet();
             da.Fill(ds, "urunler");
@@ -144,11 +144,11 @@ namespace depotakipuyg
                 while (dr.Read())
                 {
                     musterid = dr[0].ToString();
-                    tutar = dr[1].ToString();
+                    tutar = dr[2].ToString();
                 }
             }
             conn.Close();
-          //  int urunTutari = Int32.Parse(tutar);
+            int urunTutari = Int32.Parse(tutar);
             int MusteriID = Int32.Parse(musterid);
             string sql = "select musteriID,SUM(urunMiktar * urunBirim_Fiyati) AS ToplamFiyat From urunler where musteriID ='" + MusteriID+"' Group BY musteriID";          
             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -166,7 +166,7 @@ namespace depotakipuyg
             {
                 int girilmisurunfiyati = Int32.Parse(sql);
                 label9.Text = girilmisurunfiyati.ToString();
-               // label11.Text = (urunTutari - girilmisurunfiyati).ToString();
+                label11.Text = (urunTutari - girilmisurunfiyati).ToString();
             }catch(Exception) {
                 
                MessageBox.Show(comboBox1.Text+" Ünvanlının ürünleri düzenlenmediği için ilk önce ünvanlının ürünlerini ekleyin.");

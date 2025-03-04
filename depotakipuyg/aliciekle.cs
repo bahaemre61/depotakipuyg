@@ -18,6 +18,7 @@ namespace depotakipuyg
         {
             InitializeComponent();
             this.Load += Aliciekle_Load;
+            radioButton1.Checked = true;
         }
         SqlConnection conn = new SqlConnection(database.GetConnectionString);
         SqlDataReader dr;
@@ -49,7 +50,11 @@ namespace depotakipuyg
         }
         void aliciGriddoldur()
         {//"Select m.musteri_unvani,u.urun_turu,u.miktar,u.birim,u.birim_fiyati from urunler u INNER JOIN musteriler m ON m.musteri_id = u.musteri_id where musteri_unvani
-            da = new SqlDataAdapter("Select a.aliciAdi,u.urunAdi,u.urunBirim,a.aliciMiktar,a.aliciBirim_Fiyati,a.aliciTarih from alicilarr a INNER JOIN urunler u ON a.urunID = u.urunID where aliciAdi ='"+comboBox1.Text+"'", conn);
+           // da = new SqlDataAdapter("Select a.aliciAdi,u.urunAdi,u.urunBirim,a.aliciMiktar,a.aliciBirim_Fiyati,a.aliciTarih from alicilarr a INNER JOIN urunler u ON a.urunID = u.urunID where aliciAdi ='"+comboBox1.Text+"'", conn);
+           
+            da = new SqlDataAdapter
+                ("Select a.aliciAdi,u.urunAdi,u.urunBirim,a.aliciMiktar,a.aliciBirim_Fiyati,a.aliciTarih,m.musteriAdi from(( alicilarr a INNER JOIN urunler u ON a.urunID = u.urunID) INNER JOIN musteriler m ON m.musteriID = u.musteriID) where aliciAdi ='" + comboBox1.Text + "'", conn);
+
             cmdb = new SqlCommandBuilder(da);
             ds = new DataSet();
             da.Fill(ds, "alicilar");

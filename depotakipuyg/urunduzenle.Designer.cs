@@ -28,240 +28,240 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
+            button1 = new Button();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            label4 = new Label();
+            textBox4 = new TextBox();
+            label5 = new Label();
+            button2 = new Button();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            comboBox2 = new ComboBox();
+            label12 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(394, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(764, 366);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(394, 30);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(764, 366);
+            dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Hızlı Getir";
+            label1.AutoSize = true;
+            label1.Location = new Point(39, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Hızlı Getir";
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(103, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(103, 30);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 3;
+            comboBox1.SelectedValueChanged += comboBox1_SelectedValueChanged;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(206, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Ürünleri Kaydet ve Getir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(206, 289);
+            button1.Name = "button1";
+            button1.Size = new Size(118, 44);
+            button1.TabIndex = 4;
+            button1.Text = "Ürünleri Kaydet ve Getir";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Ürün Türü";
+            label2.AutoSize = true;
+            label2.Location = new Point(87, 123);
+            label2.Name = "label2";
+            label2.Size = new Size(61, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Ürün Türü";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 6;
+            textBox1.Location = new Point(161, 115);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(121, 23);
+            textBox1.TabIndex = 6;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Ürün Miktarı";
+            label3.AutoSize = true;
+            label3.Location = new Point(75, 160);
+            label3.Name = "label3";
+            label3.Size = new Size(73, 15);
+            label3.TabIndex = 7;
+            label3.Text = "Ürün Miktarı";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 23);
-            this.textBox2.TabIndex = 8;
+            textBox2.Location = new Point(161, 152);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(121, 23);
+            textBox2.TabIndex = 8;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(161, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 23);
-            this.textBox3.TabIndex = 10;
+            textBox3.Location = new Point(161, 190);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(121, 23);
+            textBox3.TabIndex = 10;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Ürün Birimi";
+            label4.AutoSize = true;
+            label4.Location = new Point(75, 193);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 15);
+            label4.TabIndex = 9;
+            label4.Text = "Ürün Birimi";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(161, 223);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 23);
-            this.textBox4.TabIndex = 12;
+            textBox4.Location = new Point(161, 223);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(121, 23);
+            textBox4.TabIndex = 12;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 226);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 15);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Birim Fiyatı";
+            label5.AutoSize = true;
+            label5.Location = new Point(68, 226);
+            label5.Name = "label5";
+            label5.Size = new Size(66, 15);
+            label5.TabIndex = 11;
+            label5.Text = "Birim Fiyatı";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(289, 390);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Geri Dön";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(289, 390);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 13;
+            button2.Text = "Geri Dön";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 364);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 15);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Gelen Ürün Fiyatı";
+            label6.AutoSize = true;
+            label6.Location = new Point(16, 364);
+            label6.Name = "label6";
+            label6.Size = new Size(97, 15);
+            label6.TabIndex = 14;
+            label6.Text = "Gelen Ürün Fiyatı";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(134, 364);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 15);
-            this.label7.TabIndex = 15;
+            label7.AutoSize = true;
+            label7.Location = new Point(134, 364);
+            label7.Name = "label7";
+            label7.Size = new Size(0, 15);
+            label7.TabIndex = 15;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 390);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 15);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Girilmiş Ürün Fiyatı";
+            label8.AutoSize = true;
+            label8.Location = new Point(16, 390);
+            label8.Name = "label8";
+            label8.Size = new Size(107, 15);
+            label8.TabIndex = 16;
+            label8.Text = "Girilmiş Ürün Fiyatı";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(134, 390);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 15);
-            this.label9.TabIndex = 17;
+            label9.AutoSize = true;
+            label9.Location = new Point(134, 390);
+            label9.Name = "label9";
+            label9.Size = new Size(0, 15);
+            label9.TabIndex = 17;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 417);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 15);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Girilecek Ürün Fiyatı";
+            label10.AutoSize = true;
+            label10.Location = new Point(16, 417);
+            label10.Name = "label10";
+            label10.Size = new Size(112, 15);
+            label10.TabIndex = 18;
+            label10.Text = "Girilecek Ürün Fiyatı";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(134, 417);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 15);
-            this.label11.TabIndex = 19;
+            label11.AutoSize = true;
+            label11.Location = new Point(134, 417);
+            label11.Name = "label11";
+            label11.Size = new Size(0, 15);
+            label11.TabIndex = 19;
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(161, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 21;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(161, 81);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 23);
+            comboBox2.TabIndex = 21;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(68, 84);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 15);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Musteri Unvani";
+            label12.AutoSize = true;
+            label12.Location = new Point(87, 84);
+            label12.Name = "label12";
+            label12.Size = new Size(68, 15);
+            label12.TabIndex = 20;
+            label12.Text = "Musteri Adı";
             // 
             // urunduzenle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 460);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "urunduzenle";
-            this.Text = "Ürün Ekleme ve Gösterme";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1173, 460);
+            Controls.Add(comboBox2);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(button2);
+            Controls.Add(textBox4);
+            Controls.Add(label5);
+            Controls.Add(textBox3);
+            Controls.Add(label4);
+            Controls.Add(textBox2);
+            Controls.Add(label3);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
+            Controls.Add(button1);
+            Controls.Add(comboBox1);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
+            Name = "urunduzenle";
+            Text = "Ürün Ekleme ve Gösterme";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
