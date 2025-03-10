@@ -21,13 +21,22 @@ namespace depotakipuyg
         }
 
         SqlConnection conn = new SqlConnection(database.GetConnectionString);
-
+        SqlDataReader dr;
         private void Urunekle_Load(object? sender, EventArgs e)
         {
-            
+            string sql = "Select DISTINCT musteriAdi from musteriler";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            conn.Open();
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                comboBox1.Items.Add(dr["musteriAdi"]);
+            }
+            conn.Close();
         }
 
-        public void musteriEkle(string Ad, int Tutar, DateTime Tarih)
+        public void musteriEkle(string Ad, double Tutar, DateTime Tarih)
         {
             string sql = "INSERT INTO musteriler (musteriAdi, musteriTutar, musteriTarih)" + " VALUES (@ad, @tutar,@tarih)";
 
@@ -45,12 +54,17 @@ namespace depotakipuyg
 
             conn.Close();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Ekleme Butonu
         {
-            if (textBox1.Text != "" && textBox2.Text != "")
+            if (comboBox1.Items.Count != 0 && comboBox1.Enabled == true && comboBox1.SelectedItem != null)
             {
-                musteriEkle(textBox1.Text, Int32.Parse(textBox2.Text), dateTimePicker1.Value);
+                musteriEkle(comboBox1.Text, double.Parse(textBox2.Text), dateTimePicker1.Value);
+                MessageBox.Show("Müşteri başarılı bir şekilde eklendi");
+
+            }
+            else if (textBox1.Text != "" && textBox2.Text != "")
+            {
+                musteriEkle(textBox1.Text, double.Parse(textBox2.Text), dateTimePicker1.Value);
                 MessageBox.Show("Müşteri başarılı bir şekilde eklendi");
             }
             else
@@ -63,6 +77,12 @@ namespace depotakipuyg
         {
             this.Hide();
             new giris().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+            new musteriDuzenle_Sil().Show();
         }
     }
 }

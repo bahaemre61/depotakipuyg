@@ -30,5 +30,11 @@ namespace depotakipuyg
             this.Hide();
             new aliciekle().Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new test().Show();
+        }
     }
 }

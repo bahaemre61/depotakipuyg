@@ -257,7 +257,9 @@
             Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "urunduzenle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Ürün Ekleme ve Gösterme";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

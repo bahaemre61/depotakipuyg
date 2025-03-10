@@ -62,7 +62,7 @@ namespace depotakipuyg
             textBox4.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             //MessageBox.Show("Deponuzdaki kalan ürün mikttarını sisteme kaydediniz.");
         }
-        public void urunCikarma(string urunturu, int miktar, string birim, int birim_fiyati)
+        public void urunCikarma(string urunturu, double miktar, string birim, double birim_fiyati)
         {
             string urunid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
@@ -89,7 +89,7 @@ namespace depotakipuyg
         {
             if (comboBox1.Text != "")
             { 
-                urunCikarma(textBox1.Text, Int32.Parse(textBox2.Text), textBox3.Text, Int32.Parse(textBox4.Text));
+                urunCikarma(textBox1.Text, Double.Parse(textBox2.Text), textBox3.Text, Double.Parse(textBox4.Text));
                 griddoldur(comboBox1.Text);
             }
             else

@@ -51,7 +51,7 @@ namespace depotakipuyg
             dataGridView1.DataSource = ds.Tables[0];
         }
 
-        public void urunEkle(string tur, int miktar, string birim , int birim_fiyati)
+        public void urunEkle(string tur, double miktar, string birim , double birim_fiyati)
         {
             string query = "select musteriID from musteriler where musteriAdi ='" + comboBox2.Text + "'";
 
@@ -92,7 +92,7 @@ namespace depotakipuyg
         {
             if (comboBox2.Text != "")
             {
-                urunEkle(textBox1.Text, Int32.Parse(textBox2.Text), textBox3.Text, Int32.Parse(textBox4.Text));
+                urunEkle(textBox1.Text, Double.Parse(textBox2.Text), textBox3.Text, Double.Parse(textBox4.Text));
                 griddoldur(comboBox1.Text);
                 textBox1.Clear();
                 textBox2.Clear();
@@ -126,7 +126,7 @@ namespace depotakipuyg
                     }
                 }
                 conn.Close();
-                int musteriTutar = Int32.Parse(query);               
+                double musteriTutar = Double.Parse(query);               
 
                 label7.Text = musteriTutar.ToString();
             }
@@ -148,7 +148,7 @@ namespace depotakipuyg
                 }
             }
             conn.Close();
-            int urunTutari = Int32.Parse(tutar);
+            double urunTutari = Double.Parse(tutar);
             int MusteriID = Int32.Parse(musterid);
             string sql = "select musteriID,SUM(urunMiktar * urunBirim_Fiyati) AS ToplamFiyat From urunler where musteriID ='" + MusteriID+"' Group BY musteriID";          
             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -164,7 +164,7 @@ namespace depotakipuyg
             conn.Close();
             try
             {
-                int girilmisurunfiyati = Int32.Parse(sql);
+                double girilmisurunfiyati = Double.Parse(sql);
                 label9.Text = girilmisurunfiyati.ToString();
                 label11.Text = (urunTutari - girilmisurunfiyati).ToString();
             }catch(Exception) {

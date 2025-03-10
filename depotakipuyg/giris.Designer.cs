@@ -83,7 +83,9 @@
             Controls.Add(button1);
             Controls.Add(button3);
             Controls.Add(button2);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "giris";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Giriş";
             ResumeLayout(false);
 
